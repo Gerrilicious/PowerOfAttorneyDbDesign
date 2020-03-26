@@ -18,6 +18,8 @@ namespace PowerOfAttorneyDbDesign.Models
 
 	    public BillingAddress BillingAddress { get; set; }
 
+	    public ICollection<FinancialInstrument> FinancialInstruments { get; set; }
+
 	    public ICollection<DisclosureRequest> DisclosureRequests { get; set; }
 
 	    public ICollection<DisclosureResponse> DisclosureResponses { get; set; }

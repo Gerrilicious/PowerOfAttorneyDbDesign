@@ -13,5 +13,9 @@ namespace PowerOfAttorneyDbDesign.Models
 	    public ICollection<PowerOfAttorney> PowerOfAttorneys { get; set; }
 
 	    public ICollection<DisclosureRequest> DisclosureRequests { get; set; }
+
+	    public Guid CompanyId { get; set; }
+
+	    public Company Company { get; set; }
     }
 }

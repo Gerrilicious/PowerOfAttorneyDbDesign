@@ -58,6 +58,11 @@ namespace PowerOfAttorneyDbDesign
 			{
 				b.Property(u => u.Id)
 				 .HasDefaultValueSql("newsequentialid()");
+
+				b.HasOne(item => item.Company)
+				 .WithMany(item => item.FinancialInstruments)
+				 .HasForeignKey(item => item.CompanyId)
+				 .OnDelete(DeleteBehavior.NoAction);
 			});
 
 			builder.Entity<BillingAddress>(b =>
